@@ -1,0 +1,45 @@
+.loadingWrapper{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    font-size: 2rem;
+    color: #FFF;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 800;
+    -webkit-transition: opacity 500ms ease-in;
+    transition: opacity 500ms ease-in;
+    opacity: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loadingOverlayWrapperBase {
+    /* margin: auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid var(--blue-color);
+    border-top-color: transparent;
+    animation: rot1 1.2s linear infinite;
+  }
+  
+  @keyframes rot1 {
+    to {
+      transform: rotate(360deg);
+    }
+  }

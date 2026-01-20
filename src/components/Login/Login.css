@@ -1,0 +1,171 @@
+.wrapper-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--white-color);
+}
+
+.wrapper {
+  position: relative;
+  max-width: 47rem;
+  width: 100%;
+  border-radius: 12px;
+  padding: 2rem 3rem 12rem;
+  background: var(--blue-color);
+  box-shadow: 0 .5rem 1rem var(--thin-box-shadow-color);
+  overflow: hidden;
+}
+
+.login-form.login {
+  position: absolute;
+  left: 50%;
+  bottom: -86%;
+  transform: translateX(-50%);
+  width: calc(100% + 22rem);
+  padding: 2rem 14rem;
+  border-radius: 50%;
+  height: 100%;
+  background: var(--white-color);
+  transition: all 0.6s ease;
+}
+
+.wrapper.active .login-form.login {
+  bottom: -14%;
+  border-radius: 35%;
+  box-shadow: 0 -5px 10px var(--thin-box-shadow-color);
+}
+
+.login-form header {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--white-color);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-form.login header {
+  color: var(--black-color);
+  opacity: 0.6;
+}
+
+.wrapper.active .login-form.login header {
+  opacity: 1;
+}
+
+.wrapper.active .signup header {
+  opacity: 0.6;
+}
+
+.wrapper .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.form-wrapper .login-input {
+  height: 6rem;
+  outline: none;
+  border: none;
+  gap: 1rem;
+  display: flex;
+  padding: 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--black-color);
+  border-radius: 8px;
+  background: var(--white-color);
+  align-items: center;
+}
+
+.form-wrapper .login-button {
+  height: 6rem;
+  outline: none;
+  border: none;
+  padding: 0 1.5rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--black-color);
+  border-radius: 8px;
+  background: var(--white-color);
+}
+
+.login-button-field{
+  border: 1px solid var(--border-gray-color);
+}
+
+.login-input-field{
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+
+.form-wrapper .login-input {
+  border: 1px solid var(--border-gray-color);
+}
+
+.form-wrapper .error-text{
+  font-size: 1.4rem;
+  color: red;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+.form-wrapper .error-field{
+  border: 2px solid red;
+}
+
+.login-form.login .login-input:focus {
+  box-shadow: 0 1px 0 var(--border-gray-color);
+}
+
+
+.form-wrapper .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-wrapper > .checkbox .login-input[type="checkbox"] {
+  height: 1.6rem;
+  width: 1.6rem;
+  accent-color: var(--white-color);
+  cursor: pointer;
+}
+.forgot-label{
+  font-size: 1.5rem;
+  cursor: pointer;
+} 
+.forgot-label:hover{
+  color: var(--blue-color);
+}
+
+.form-wrapper .checkbox label {
+  cursor: pointer;
+  color: var(--white-color);
+  font-size: 1.5rem;
+}
+
+.form-wrapper a {
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.form-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.form-wrapper .login-button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.login-form.login .login-button[type="submit"] {
+  background: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+}
