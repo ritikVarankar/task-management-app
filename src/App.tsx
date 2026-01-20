@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import AuthContext from './components/context/AuthContext';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter } from 'react-router-dom';
 import Loader from './components/Reusable/Loader/loader';
 import RouteComponent from './components/RouteComponent';
 import { Provider } from 'react-redux';
@@ -104,9 +104,11 @@ function App() {
       handleAutoCloseChange:handleAutoCloseChange
     }}>
       <Provider store={store}>
-        <BrowserRouter>
+        {/* For gh deployment use HashRouter  */}
+        {/* For git push use BrowserRouter  */}
+        <HashRouter> 
           <RouteComponent />
-        </BrowserRouter>
+        </HashRouter> 
         <Loader />
        <ToastList data={toasts} position={position} removeToast={removeToast} />
       </Provider>
